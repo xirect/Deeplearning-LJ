@@ -22,22 +22,22 @@ from sklearn.linear_model import LinearRegression
 | Ep4      | V        |      |Training and testing|Het trainen van je eigen linear regression||
 | Ep5      | V        |      |Forecasting and prediction|Eerste prediction die een beetje sense maakt||
 | Ep6      | V        |      |Pickling and scaling|Word weinig verteld over scaling, alleen hoe je het op server basis toe kunt passen, pickling vooral voor het opslaan van informatie, handig wanneer je niet elke keer je programma wilt trainen wat veel tijd kost||
-| Ep7      |          |      |Regression how it works|Y=mx+b M=Slope-of-line,B=Y-intercept, regressielijn, Best fit line, M(Slope)=(mean(X)*mean(y)-mean(xy))/(mean(x)^2-mean(x^2)), b(Yintercept)=mean(y)-m*mean(x)||
-| Ep8      |          |      |Best fit slope|||
-| Ep9      |          |      |Best fit line|||
-| Ep10      |          |      |R-squared theory|||
-| Ep11      |          |      |R-squared|||
-| Ep12      |          |      |Testing assumptions|||
-| Ep13      |          |      |K-nearest theory|||
-| Ep14      |          |      |K-nearest|||
-| Ep15      |          |      |Euclidian distance|||
-| Ep16      |          |      |Writing your own K-nearest algorithm|||
-| Ep17      |          |      |Writing your own K-nearest algorithm in code|||
-| Ep18      |          |      |Applying K-nearest|||
-| Ep19      |          |      |Final thoughts about K-nearest|||
-| Ep20      |          |      |Support vector machine|||
-| Ep21      |          |      |Vectors|||
-| Ep22      |          |      |Vector assertion|||
-| Ep23      |          |      |Vector machine fundamentals|||
+| Ep7      | V         |      |Regression how it works|Y=mx+b M=Slope-of-line,B=Y-intercept, regressielijn, Best fit line, M(Slope)=(mean(X)*mean(y)-mean(xy))/(mean(x)^2-mean(x^2)), b(Yintercept)=mean(y)-m*mean(x)||
+| Ep8      | V         |      |Best fit slope|||
+| Ep9      | V         |      |Best fit line|||
+| Ep10      | V         |      |R-squared theory|||
+| Ep11      | V         |      |R-squared|||
+| Ep12      | V         |      |Testing assumptions|||
+| Ep13      | V         |      |K-nearest theory|||
+| Ep14      | V         |      |K-nearest|||
+| Ep15      | V         |      |Euclidian distance|||
+| Ep16      | V         |      |Writing your own K-nearest algorithm|||
+| Ep17      | V         |      |Writing your own K-nearest algorithm in code|||
+| Ep18      | V         |      |Applying K-nearest|||
+| Ep19      | V         |      |Final thoughts about K-nearest|||
+| Ep20      |          |      |Support vector machine|Theorieee||
+| Ep21      |          |      |Vectors|Theorieee||
+| Ep22      |          |      |Vector assertion|Theorieee||
+| Ep23      |          |      |Vector machine fundamentals|Theorieee||
 
 
