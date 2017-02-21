@@ -21,6 +21,10 @@ df['HL_PCT'] =  (df['Adj. High'] - df['Adj. Close']) / df['Adj. Close'] * 100
 # Percentage verschil bepalen
 df['PCT_change'] = (df['Adj. Close'] - df['Adj. Open']) / df['Adj. Open'] * 100
 
+
+
+
+
 # Alleen belangrijke dingen terug plaatsen in je dataframe
 df = df[['Adj. Close', 'HL_PCT','PCT_change','Adj. Volume']]
 
@@ -33,16 +37,16 @@ forecast_col = 'Adj. Close'
 df.fillna(-99999, inplace=True)
 
 # Aantal dagen vooruit die je gaat voorspellen
-forecast_out = int(math.ceil(0.01*len(df)))
+forecast_out = int(math.ceil(0.1*len(df)))
 print("Aantal dagen die vooruit voorspeld worden ", forecast_out)
 
 # Uiteindelijke label bepaling
 df['label'] = df[forecast_col].shift(-forecast_out)
 
-X = np.array(df.drop(['label'],1))
+X = np.array(df.drop(['label', 'Adj. Close'],1))
 X = preprocessing.scale(X)
-X = X[:-forecast_out]
 X_lately = X[-forecast_out:]
+X = X[:-forecast_out]
 
 df.dropna(inplace=True)
 y = np.array(df['label'])
