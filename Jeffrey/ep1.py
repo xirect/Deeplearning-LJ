@@ -2,10 +2,15 @@ import quandl
 import pandas as pd
 import math
 import numpy as np
+import matplotlib.pyplot as plt
+import datetime
+from matplotlib import style
 from sklearn import preprocessing, cross_validation, svm
 from sklearn.linear_model import LinearRegression
 
-#Openen van dataset
+# Style voor grafieken
+style.use('ggplot')
+# Openen van dataset
 df = quandl.get("WIKI/GOOGL")
 
 
@@ -30,31 +35,54 @@ forecast_col = 'Adj. Close'
 df.fillna(-99999, inplace=True)
 
 # Aantal dagen vooruit die je gaat voorspellen
-forecast_out = int(math.ceil(0.001*len(df)))
+forecast_out = int(math.ceil(0.01*len(df)))
 print("Aantal dagen die vooruit voorspeld worden ", forecast_out)
 
 # Uiteindelijke label bepaling
 df['label'] = df[forecast_col].shift(-forecast_out)
 
-# Dropping van alle NA's, dus wanneer er geen data beschikbaar is.
+X = np.array(df.drop(['label'],1))
+X = preprocessing.scale(X)
+X = X[:-forecast_out]
+X_lately = X[-forecast_out:]
+
 df.dropna(inplace=True)
 
-X = np.array(df.drop(['label'],1))
+y = np.array(df['label'])
 y = np.array(df['label'])
 
-# Preprocessing van data op een scale van -1 tot 1
-X = preprocessing.scale(X)
-y = np.array(df['label'])
 
 # Cross validation, X en Y blijven gekoppeld maar worden random door elkaar gegooit
 X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.2)
 
 # Lineair regression word geinitialiseerd, n_jobs=-1 betekend max aantal threads die je cpu aan kan.
-clf = LinearRegression()
+clf = LinearRegression(n_jobs=-1)
 
 # Fitting is het trainen van je Linear Regression
 clf.fit(X_train, y_train)
 
 # Accuracy berekening, hier word je testing set voor gebruikt.
 accuracy = clf.score(X_test, y_test)
-print(accuracy)
+
+forecast_set = clf.predict(X_lately)
+
+print(forecast_set, accuracy, forecast_out)
+
+df['Forecast'] = np.nan
+
+last_date = df.iloc[-1].name
+last_unix = last_date.timestamp()
+one_day = 86400
+next_unix = last_unix + one_day
+
+for i in forecast_set:
+    next_date = datetime.datetime.fromtimestamp(next_unix)
+    next_unix += one_day
+    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)] + [i]
+
+df['Adj. Close'].plot()
+df['Forecast'].plot()
+plt.legend(loc=4)
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.show()
