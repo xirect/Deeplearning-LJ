@@ -22,7 +22,7 @@ from sklearn.linear_model import LinearRegression
 | Ep4      | V        |      |Training and testing|Het trainen van je eigen linear regression||
 | Ep5      | V        |      |Forecasting and prediction|Eerste prediction die een beetje sense maakt||
 | Ep6      | V        |      |Pickling and scaling|Word weinig verteld over scaling, alleen hoe je het op server basis toe kunt passen, pickling vooral voor het opslaan van informatie, handig wanneer je niet elke keer je programma wilt trainen wat veel tijd kost||
-| Ep7      |          |      |Regression how it works|||
+| Ep7      |          |      |Regression how it works|Y=mx+b M=Slope-of-line,B=Y-intercept, regressielijn, Best fit line, M(Slope)=(mean(X)*mean(y)-mean(xy))/(mean(x)^2-mean(x^2)), b(Yintercept)=mean(y)-m*mean(x)||
 | Ep8      |          |      |Best fit slope|||
 | Ep9      |          |      |Best fit line|||
 | Ep10      |          |      |R-squared theory|||
