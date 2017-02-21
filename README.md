@@ -1,8 +1,19 @@
-#Github
-Intro into deeplearning.
+# Github
+### Intro into deeplearning.
 
-Using the Sentdex tutorials at : https://www.youtube.com/watch?v=JcI5Vnw0b2c&index=2&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v
+#### Using the Sentdex tutorials at : https://www.youtube.com/watch?v=JcI5Vnw0b2c&index=2&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v
 
+### Required modules as of part 6
+import quandl, math, pickle, datetime
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import style
+from sklearn import preprocessing, cross_validation, svm
+from sklearn.linear_model import LinearRegression
+
+
+## Table of content
 | Episodes |  Jeffrey | Luka |Titel|Comments Jeffrey|Comments Luka|
 |:--------:|----------|------|------|--------------------------------|--------|
 | Ep1      | V        |      |Intro|Skipable, alleen uitleg over de basis van machine learning||
