@@ -35,9 +35,14 @@ from sklearn.linear_model import LinearRegression
 | Ep17      | V         |      |Writing your own K-nearest algorithm in code|||
 | Ep18      | V         |      |Applying K-nearest|||
 | Ep19      | V         |      |Final thoughts about K-nearest|||
-| Ep20      |          |      |Support vector machine|Theorieee||
-| Ep21      |          |      |Vectors|Theorieee||
-| Ep22      |          |      |Vector assertion|Theorieee||
-| Ep23      |          |      |Vector machine fundamentals|Theorieee||
+| Ep20      | V         |      |Support vector machine|Theorieee||
+| Ep21      | V         |      |Vectors|Theorieee||
+| Ep22      | V         |      |Vector assertion|Theorieee||
+| Ep23      | V         |      |Vector machine fundamentals|Theorieee||
+| Ep24      |          |      |Optimization of SVM|Theorieee||
+| Ep25      |          |      |Vector machine fundamentals|Theorieee||
+| Ep26      |          |      |Vector machine fundamentals|Theorieee||
+| Ep27      |          |      |Vector machine fundamentals|Theorieee||
+| Ep28      |          |      |Vector machine fundamentals|Theorieee||
 
 
