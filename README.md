@@ -36,10 +36,10 @@ from sklearn.linear_model import LinearRegression
 | Ep18      | V         |      |Applying K-nearest|||
 | Ep19      | V         |      |Final thoughts about K-nearest|||
 | Ep20      | V         |      |Support vector machine|Theorieee||
-| Ep21      | V         |      |Vectors|Theorieee||
+| Ep21      | V         |      |Vectors|Theorieee, basis vector theorie net zoals je al gehad hebt met rekenen, wanneer ze [[A]] gebruiken, dan bedoelen ze gewoon de lengte van de vector, deze kun je berekenen met de stelling van pythagoras wanneer je een vector hebt met 2 features||
 | Ep22      | V         |      |Vector assertion|Theorieee||
 | Ep23      | V         |      |Vector machine fundamentals|Theorieee||
-| Ep24      |          |      |Optimization of SVM|Theorieee||
+| Ep24      | V         |      |Optimization of SVM|Theorieee, 30 min lang, veel moeilijke algoritmens, volgende aflevering gaat deze omzetten in python code||
 | Ep25      |          |      |Vector machine fundamentals|Theorieee||
 | Ep26      |          |      |Vector machine fundamentals|Theorieee||
 | Ep27      |          |      |Vector machine fundamentals|Theorieee||
